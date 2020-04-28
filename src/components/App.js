@@ -48,8 +48,3 @@ const App = () => {
 };
 
 export default App;
-
-// Product.defaultProps = {
-//     imgUrl:
-//       'https://dummyimage.com/640x480/2a2a2a/ffffff&text=Product+image+placeholder',
-//   };
