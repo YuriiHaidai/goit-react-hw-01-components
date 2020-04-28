@@ -1,12 +1,18 @@
 import React from 'react';
+import styles from './FriendList.module.css';
 
 export const FriendList = ({ friends }) => (
-  <ul className="friend-list">
+  <ul className={styles.friend_list}>
     {friends.map(elem => (
-      <li className="item" key={elem.id}>
-        <span className="status"></span>
-        <img className="avatar" src={elem.avatar} alt={elem.name} width="48" />
-        <p className="name">{elem.name}</p>
+      <li className={styles.item} key={elem.id}>
+        <span className={elem.isOnline ? styles.onLine : styles.offLine}></span>
+        <img
+          className={styles.avatar}
+          src={elem.avatar}
+          alt={elem.name}
+          width="48"
+        />
+        <p className={styles.name}>{elem.name}</p>
       </li>
     ))}
   </ul>
