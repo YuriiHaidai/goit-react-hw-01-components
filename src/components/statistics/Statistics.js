@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './Statistics.module.css';
+import PropTypes from 'prop-types';
 
 function generateColor() {
   return '#' + Math.floor(Math.random() * 16777215).toString(16);
@@ -23,3 +24,8 @@ export const Statistics = ({ title, stats }) => (
     </ul>
   </section>
 );
+
+Statistics.propTypes = {
+  title: PropTypes.string,
+  stats: PropTypes.array.isRequired,
+};
